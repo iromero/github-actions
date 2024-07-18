@@ -7,14 +7,14 @@ on: push
 
 jobs:
   checkout-job:
-    run-on: macos-latest
+    runs-on: macos-latest
 
     steps:
       - name: Check out the code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v1.0.0
+        uses: actions/upload-artifact@v2
         wtth: 
-          name: macos
-          path: ./${{ env.ARTIFACT_NAME_VARIABLE }} 
+          name: ${{ env.ARTIFACT_NAME_VARIABLE }}
+          path: .
