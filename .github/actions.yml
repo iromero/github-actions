@@ -17,4 +17,4 @@ jobs:
         uses: actions/upload-artifact@v1.0.0
         wtth: 
           name: macos
-          path: ./${{ env.ARTIFACT_NAME_VARIABLE }}  
+          path: ./${{ env.ARTIFACT_NAME_VARIABLE }} 
