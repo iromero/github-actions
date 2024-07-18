@@ -1,0 +1,20 @@
+name: artifact
+
+env: 
+  ARTIFACT_NAME_VARIABLE: 'Readme.md'
+
+on: push
+
+jobs:
+  checkout-job:
+    run-on: macos-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v1
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1.0.0
+        wtth: 
+          name: macos
+          path: ./${{ env.ARTIFACT_NAME_VARIABLE }}  
